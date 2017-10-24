@@ -1,0 +1,79 @@
+  <!DOCTYPE html lang="en">
+
+    <head>
+      <!-- Minimum Meta Tags -->
+      <meta charset="utf-8">
+      <meta http-equiv="x-ua-compatible" content="ie=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+      <!-- Title & Description -->
+      <title>Page Title less than 65 characters</title>
+      <meta name="description" content="Description of the page less than 150 characters">
+
+      <!-- Facebook Open Graph -->
+      <meta property="og:type" content="website">
+      <meta property="og:url" content="https://example.com/page.html">
+      <meta property="og:title" content="Content Title">
+      <meta property="og:image" content="https://example.com/image.jpg">
+      <meta property="og:description" content="Description Here">
+      <meta property="og:site_name" content="Site Name">
+      <meta property="og:locale" content="en_US">
+
+      <!-- Twitter Card -->
+      <meta name="twitter:card" content="summary">
+      <meta name="twitter:site" content="@site_account">
+      <meta name="twitter:creator" content="@individual_account">
+      <meta name="twitter:url" content="https://example.com/page.html">
+      <meta name="twitter:title" content="Content Title">
+      <meta name="twitter:description" content="Content description less than 200 characters">
+      <meta name="twitter:image" content="https://example.com/image.jpg">
+
+      <!-- Favicon -->
+      <!-- For IE 10 and below - place favicon.ico in the root directory, no tag -->
+      <!-- For IE 11, Chrome, Firefox, Safari, Opera -->
+      <link rel="icon" type="image/png" sizes="16x16" href="/path/to/favicon-16x16.png">
+      <link rel="icon" type="image/png" sizes="32x32" href="/path/to/favicon-32x32.png">
+      <link rel="icon" type="image/png" sizes="96x96" href="/path/to/favicon-96x96.png">
+    </head>
+
+    <body>
+      <nav></nav>
+      <section>
+        <form action="/test" method="get">
+          <h3>First Input Set</h3>
+          <li>
+            <input type="radio" name="first_input">Input 1
+            <input type="radio" name="first_input">Input 2
+            <input type="radio" name="first_input">Input 3
+          </li>
+          <h3>Second Input Set</h3>
+          <li>
+            <input type="radio" name="second_input">Radio 1
+            <input type="radio" name="second_input">Radio 2
+            <input type="radio" name="second_input">Radio 3
+          </li>
+
+          <input type="submit" id="btnSubmit">
+        </form>
+      </section>
+      <footer></footer>
+    </body>
+
+    <script>
+      var script = document.createElement('script');script.src = "https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js";document.getElementsByTagName('head')[0].appendChild(script);
+
+      $(function(){
+        $("#btnSubmit").click(function(e){
+          e.preventDefault();
+          var isChecked = jQuery("input:checked").val();
+            if(!isChecked){
+              alert('Nothing Selected');
+            }else{
+              alert('You have selected :'+isChecked);
+            }
+        });
+      }());
+    </script>
+
+  </html>
+
